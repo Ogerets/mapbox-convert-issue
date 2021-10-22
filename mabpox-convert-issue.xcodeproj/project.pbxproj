@@ -13,9 +13,12 @@
 		97EE918A2723001D0035BA7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97EE91882723001D0035BA7B /* Main.storyboard */; };
 		97EE918C2723001E0035BA7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97EE918B2723001E0035BA7B /* Assets.xcassets */; };
 		97EE918F2723001E0035BA7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97EE918D2723001E0035BA7B /* LaunchScreen.storyboard */; };
+		EA8D58C873571EB3425C0065 /* Pods_mabpox_convert_issue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5605D01EC9DE874DE8D7BE50 /* Pods_mabpox_convert_issue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5605D01EC9DE874DE8D7BE50 /* Pods_mabpox_convert_issue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mabpox_convert_issue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63066B78C7F869A75D318042 /* Pods-mabpox-convert-issue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mabpox-convert-issue.release.xcconfig"; path = "Target Support Files/Pods-mabpox-convert-issue/Pods-mabpox-convert-issue.release.xcconfig"; sourceTree = "<group>"; };
 		97EE917F2723001D0035BA7B /* mabpox-convert-issue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mabpox-convert-issue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97EE91822723001D0035BA7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97EE91842723001D0035BA7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		97EE918B2723001E0035BA7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97EE918E2723001E0035BA7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97EE91902723001E0035BA7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0373C4F41336331920D0562 /* Pods-mabpox-convert-issue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mabpox-convert-issue.debug.xcconfig"; path = "Target Support Files/Pods-mabpox-convert-issue/Pods-mabpox-convert-issue.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8D58C873571EB3425C0065 /* Pods_mabpox_convert_issue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5716E3192DDAE03D85240DDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0373C4F41336331920D0562 /* Pods-mabpox-convert-issue.debug.xcconfig */,
+				63066B78C7F869A75D318042 /* Pods-mabpox-convert-issue.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		95359E8AE07D153095D4426E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5605D01EC9DE874DE8D7BE50 /* Pods_mabpox_convert_issue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		97EE91762723001D0035BA7B = {
 			isa = PBXGroup;
 			children = (
 				97EE91812723001D0035BA7B /* mabpox-convert-issue */,
 				97EE91802723001D0035BA7B /* Products */,
+				5716E3192DDAE03D85240DDB /* Pods */,
+				95359E8AE07D153095D4426E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97EE91932723001E0035BA7B /* Build configuration list for PBXNativeTarget "mabpox-convert-issue" */;
 			buildPhases = (
+				0C0034767BE415DB34BC8ED4 /* [CP] Check Pods Manifest.lock */,
 				97EE917B2723001D0035BA7B /* Sources */,
 				97EE917C2723001D0035BA7B /* Frameworks */,
 				97EE917D2723001D0035BA7B /* Resources */,
+				C84FE9344BFA80CC2C7141FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C0034767BE415DB34BC8ED4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mabpox-convert-issue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C84FE9344BFA80CC2C7141FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mabpox-convert-issue/Pods-mabpox-convert-issue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mabpox-convert-issue/Pods-mabpox-convert-issue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mabpox-convert-issue/Pods-mabpox-convert-issue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97EE917B2723001D0035BA7B /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		97EE91942723001E0035BA7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0373C4F41336331920D0562 /* Pods-mabpox-convert-issue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +373,7 @@
 		};
 		97EE91952723001E0035BA7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63066B78C7F869A75D318042 /* Pods-mabpox-convert-issue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
