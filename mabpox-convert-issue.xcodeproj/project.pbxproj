@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,7 +48,6 @@
 				A0373C4F41336331920D0562 /* Pods-mabpox-convert-issue.debug.xcconfig */,
 				63066B78C7F869A75D318042 /* Pods-mabpox-convert-issue.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,39 @@
 		97EE91812723001D0035BA7B /* mabpox-convert-issue */ = {
 			isa = PBXGroup;
 			children = (
-				97EE91822723001D0035BA7B /* AppDelegate.swift */,
-				97EE91842723001D0035BA7B /* SceneDelegate.swift */,
+				97EE919A272351E70035BA7B /* Supporting Files */,
+				97EE9199272351DC0035BA7B /* Delegates */,
+				97EE9198272351D20035BA7B /* Views */,
 				97EE91862723001D0035BA7B /* ViewController.swift */,
-				97EE91882723001D0035BA7B /* Main.storyboard */,
-				97EE918B2723001E0035BA7B /* Assets.xcassets */,
-				97EE918D2723001E0035BA7B /* LaunchScreen.storyboard */,
 				97EE91902723001E0035BA7B /* Info.plist */,
 			);
 			path = "mabpox-convert-issue";
+			sourceTree = "<group>";
+		};
+		97EE9198272351D20035BA7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97EE91882723001D0035BA7B /* Main.storyboard */,
+				97EE918D2723001E0035BA7B /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97EE9199272351DC0035BA7B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				97EE91822723001D0035BA7B /* AppDelegate.swift */,
+				97EE91842723001D0035BA7B /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		97EE919A272351E70035BA7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97EE918B2723001E0035BA7B /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
