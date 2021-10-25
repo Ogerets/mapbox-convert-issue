@@ -14,10 +14,10 @@ class ViewController: UIViewController {
 
     // Camera with non zero pitch nearby coordinatesToCheck
     var cameraRepresentingIssue: CameraOptions {
-        CameraOptions(center: .init(latitude: 50.434_1, longitude: 30.491),
-                      zoom: 14.4,
-                      bearing: 253.25,
-                      pitch: 58.625)
+        CameraOptions(center: .init(latitude: 50.423_6, longitude: 30.473),
+                      zoom: 14.2,
+                      bearing: 252,
+                      pitch: 50.45)
     }
 
     // Camera with zero pitch nearby coordinatesToCheck
