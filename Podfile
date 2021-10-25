@@ -5,6 +5,6 @@ target 'mabpox-convert-issue' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Mapbox-iOS-SDK', '6.4.0'
+  pod 'MapboxMaps', '10.0.1'
 
 end

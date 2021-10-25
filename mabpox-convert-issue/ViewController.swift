@@ -5,7 +5,7 @@
 //  Created by Yevhen Pyvovarov on 22.10.2021.
 //
 
-import Mapbox
+import MapboxMaps
 
 class ViewController: UIViewController {
 
@@ -13,24 +13,31 @@ class ViewController: UIViewController {
     let coordinatesToCheck = CLLocationCoordinate2D(latitude: 50.450_1, longitude: 30.523_4)
 
     // Camera with non zero pitch nearby coordinatesToCheck
-    var cameraRepresentingIssue: MGLMapCamera {
-        MGLMapCamera(lookingAtCenter: .init(latitude: 50.445, longitude: 30.511_1),
-                     altitude: 477.041,
-                     pitch: 59.25,
-                     heading: 268.4)
+    var cameraRepresentingIssue: CameraOptions {
+        CameraOptions(center: .init(latitude: 50.434_1, longitude: 30.491),
+                      zoom: 14.4,
+                      bearing: 253.25,
+                      pitch: 58.625)
     }
 
     // Camera with zero pitch nearby coordinatesToCheck
-    var cameraRepresentingCorrectBehaviour: MGLMapCamera {
-        let camera = self.cameraRepresentingIssue
-        camera.pitch = 0
+    var cameraRepresentingCorrectBehaviour: CameraOptions {
+        let newPitch: CGFloat = 0
+
+        let camera = CameraOptions(center: self.cameraRepresentingIssue.center,
+                                   zoom: self.cameraRepresentingIssue.zoom,
+                                   bearing: self.cameraRepresentingIssue.bearing,
+                                   pitch: newPitch)
+
         return camera
     }
 
     // Map View
-    private lazy var mapView: MGLMapView = {
-        let url = URL(string: "mapbox://styles/mapbox/streets-v11")!
-        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
+    private lazy var mapView: MapView = {
+        let resourceOptions = ResourceOptions(accessToken: "FIXME")
+        let cameraOptions = CameraOptions(center: self.coordinatesToCheck, zoom: 13, bearing: 0, pitch: 30)
+        let mapOptions = MapInitOptions(resourceOptions: resourceOptions, cameraOptions: cameraOptions)
+        let mapView = MapView(frame: view.bounds, mapInitOptions: mapOptions)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
         return mapView
@@ -43,17 +50,19 @@ class ViewController: UIViewController {
         view.addSubview(self.mapView)
 
         // Set camera with zero pitch nearby & convert coordinatesToCheck to point at mapView
-        self.mapView.setCamera(self.cameraRepresentingCorrectBehaviour, animated: false)
-        let point1 = self.mapView.convert(self.coordinatesToCheck, toPointTo: self.mapView)
+        self.mapView.camera.fly(to: self.cameraRepresentingCorrectBehaviour, duration: 0) { _ in
+            let point1 = self.mapView.mapboxMap.point(for: self.coordinatesToCheck)
 
-        // Correct calculated point
-        print("Correct calculated point:  \(point1)")
+            // Correct calculated point
+            print("Correct calculated point:  \(point1)")
 
-        // Set camera with non zero pitch nearby & convert coordinatesToCheck to point at mapView
-        self.mapView.setCamera(self.cameraRepresentingIssue, animated: false)
-        let point2 = self.mapView.convert(self.coordinatesToCheck, toPointTo: self.mapView)
+            // Set camera with non zero pitch nearby & convert coordinatesToCheck to point at mapView
+            self.mapView.camera.fly(to: self.cameraRepresentingIssue, duration: 0) { _ in
+                let point2 = self.mapView.mapboxMap.point(for: self.coordinatesToCheck)
 
-        // Some huge negative numbers
-        print("Incorrect calculated point \(point2)")
+                // Some huge negative numbers
+                print("Incorrect calculated point \(point2)")
+            }
+        }
     }
 }

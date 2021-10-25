@@ -1,20 +1,33 @@
 PODS:
-  - Mapbox-iOS-SDK (6.4.0):
-    - MapboxMobileEvents (~> 0.10.11)
-  - MapboxMobileEvents (0.10.12)
+  - MapboxCommon (20.0.0)
+  - MapboxCoreMaps (10.0.0):
+    - MapboxCommon (~> 20.0)
+  - MapboxMaps (10.0.1):
+    - MapboxCommon (= 20.0.0)
+    - MapboxCoreMaps (= 10.0.0)
+    - MapboxMobileEvents (= 1.0.6)
+    - Turf (~> 2.0)
+  - MapboxMobileEvents (1.0.6)
+  - Turf (2.0.0)
 
 DEPENDENCIES:
-  - Mapbox-iOS-SDK (= 6.4.0)
+  - MapboxMaps (= 10.0.1)
 
 SPEC REPOS:
   trunk:
-    - Mapbox-iOS-SDK
+    - MapboxCommon
+    - MapboxCoreMaps
+    - MapboxMaps
     - MapboxMobileEvents
+    - Turf
 
 SPEC CHECKSUMS:
-  Mapbox-iOS-SDK: 7eb24d0f44ee69adb037e5addc3f810db73d47a8
-  MapboxMobileEvents: b72b07268586c6fd1f53178f08df15f74070b188
+  MapboxCommon: 18ae12e6b4286f59f685862aaa5766fd95828ce2
+  MapboxCoreMaps: c2847aa114c71873def0d9662b0b7aba9e75d3af
+  MapboxMaps: a74f59bcb19690ecdc345488c06f5548981b9089
+  MapboxMobileEvents: 14d7ac3ee95b4142c4fec2205dfd48ff453e8871
+  Turf: 79ad33d164291444775d83e5db4be199dd1f606f
 
-PODFILE CHECKSUM: 18d0ec856c92cafe1da527501dce2238c53a4f09
+PODFILE CHECKSUM: 3a8aa618f02daf647696e6dfcb2a882bff997648
 
 COCOAPODS: 1.11.2

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>MGLMapboxAccessToken</key>
-	<string>FIXME</string>
+	<string>pk.eyJ1IjoiYmlyZC1yZW50IiwiYSI6ImNqczBrbW0xMDFraTQ0NHBnOG5reDAxb2kifQ.m3MoKaDO2blKSAsSA3bt9w</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
